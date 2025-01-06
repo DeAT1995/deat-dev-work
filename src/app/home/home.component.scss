@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #3f0590;
+  z-index: 1;
+}
+
+.header-container {
+  background-color: #fbcb38;
+}
+
+.profile-picture {
+  position: absolute;
+  left: 70%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.profile-picture img {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  position: relative;
+  margin-left: 150px;
+  z-index: 2;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 7em;
+  color: #c6d663;
+  font-family: "Jersey 15", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.profile-info p {
+  margin: 10px 0 0 0;
+  font-size: 1.2em;
+  color: #faf3e3;
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.line-container1 {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 200px;
+}
+
+.logo-container {
+  position: fixed; /* Use fixed para deixar o logo fixo no topo */
+  top: 2rem; /* Distância do topo da página */
+  left: 2rem; /* Distância da borda esquerda */
+  z-index: 100; /* Garante que o logo fique visível acima dos outros elementos */
+}
+
+.logo-container img.logo {
+  width: 150px; /* Tamanho do logo, ajuste conforme necessário */
+  height: auto;
+  display: block;
+}
+
+.logo-link {
+  display: inline-block; /* Faz com que o link se comporte como um bloco, para envolver a imagem */
+  text-decoration: none; /* Remove qualquer sublinhado do link */
+}
+
+/* Estilo para o botão do menu no canto superior direito */
+.menu-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+}
+
+.menu-button mat-icon {
+  color: white;
+  font-size: 2.5rem; /* Ajuste o tamanho do ícone */
+}
