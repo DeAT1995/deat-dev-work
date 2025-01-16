@@ -74,32 +74,39 @@
 }
 
 .logo-container {
-  position: fixed; /* Use fixed para deixar o logo fixo no topo */
-  top: 2rem; /* Distância do topo da página */
-  left: 2rem; /* Distância da borda esquerda */
-  z-index: 100; /* Garante que o logo fique visível acima dos outros elementos */
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
 }
 
 .logo-container img.logo {
-  width: 150px; /* Tamanho do logo, ajuste conforme necessário */
+  width: 150px;
   height: auto;
   display: block;
 }
 
 .logo-link {
-  display: inline-block; /* Faz com que o link se comporte como um bloco, para envolver a imagem */
-  text-decoration: none; /* Remove qualquer sublinhado do link */
+  display: inline-block;
+  text-decoration: none;
 }
 
-/* Estilo para o botão do menu no canto superior direito */
 .menu-button {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 3rem;
   z-index: 200;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
 
-.menu-button mat-icon {
-  color: white;
-  font-size: 2.5rem; /* Ajuste o tamanho do ícone */
+  .menu-icon {
+    color: #3f0590;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
 }

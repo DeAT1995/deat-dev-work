@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,24 +16,51 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [MatMenuModule, MatIconModule, MatButtonModule, CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
   animations: [
-    trigger('transformMenu', [
+    trigger('iconTransition', [
       state(
-        'start',
+        'menu',
         style({
-          // defina os estilos iniciais aqui
+          opacity: 1,
+          transform: 'rotate(0deg)',
         })
       ),
-      transition('* => start', [
-        animate(
-          '0.5s',
-          style({
-            // defina os estilos de transição aqui
-          })
-        ),
-      ]),
+      state(
+        'close',
+        style({
+          opacity: 1,
+          transform: 'rotate(90deg)',
+        })
+      ),
+      transition('menu <=> close', [animate('0.8s ease-in-out')]),
     ]),
   ],
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit, OnDestroy {
+  isMenuOpen = false;
+
+  constructor(private elRef: ElementRef) {}
+
+  ngOnInit() {
+    document.addEventListener('click', this.onClickOutside.bind(this));
+  }
+
+  ngOnDestroy() {
+    document.removeEventListener('click', this.onClickOutside.bind(this));
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  onClickOutside(event: MouseEvent) {
+    if (this.elRef.nativeElement.contains(event.target)) {
+      return;
+    }
+
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+    }
+  }
+}

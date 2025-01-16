@@ -20,11 +20,23 @@
   <img src="assets/1.png" alt="linha decorativa" />
 </div>
 
-<!-- Menu Dropdown -->
-<button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
-  <mat-icon>menu</mat-icon>
+<!-- Menu Button -->
+<button
+  mat-icon-button
+  class="menu-button"
+  (click)="toggleMenu()"
+  [matMenuTriggerFor]="menu"
+>
+  <mat-icon *ngIf="!isMenuOpen" class="menu-icon" [@iconTransition]="'menu'"
+    >menu</mat-icon
+  >
+  <mat-icon *ngIf="isMenuOpen" class="menu-icon" [@iconTransition]="'close'"
+    >close</mat-icon
+  >
 </button>
-<mat-menu #menu="matMenu">
+
+<!-- Menu Dropdown -->
+<mat-menu #menu="matMenu" (closed)="(!isMenuOpen)">
   <button mat-menu-item>About</button>
   <button mat-menu-item>Curriculum</button>
   <button mat-menu-item>Contact</button>
