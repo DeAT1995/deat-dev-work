@@ -3,7 +3,7 @@
     <img src="assets/logo.png" alt="Logo" class="logo" />
   </a>
 </div>
-<div class="header-container">
+<div class="home-container">
   <div class="profile-picture">
     <img src="assets/deat-profile.png" alt="Profile Picture" />
   </div>
@@ -14,10 +14,6 @@
     </h1>
     <p>I'm passionate about building robust and scalable frontend solutions.</p>
   </div>
-</div>
-
-<div class="line-container1">
-  <img src="assets/1.png" alt="linha decorativa" />
 </div>
 
 <!-- Menu Button -->
@@ -36,9 +32,9 @@
 </button>
 
 <!-- Menu Dropdown -->
-<mat-menu #menu="matMenu" (closed)="(!isMenuOpen)">
+<mat-menu #menu="matMenu" (closed)="(!isMenuOpen)" class="menu-dropdown">
   <button mat-menu-item>About</button>
+  <button mat-menu-item>Projects</button>
   <button mat-menu-item>Curriculum</button>
   <button mat-menu-item>Contact</button>
-  <button mat-menu-item>Projects</button>
 </mat-menu>

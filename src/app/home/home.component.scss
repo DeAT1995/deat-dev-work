@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-.header-container {
+.home-container {
   position: relative;
   display: flex;
   align-items: center;
   padding: 20px;
   color: white;
   overflow: hidden;
-  height: 100vh;
+  height: 93vh;
 }
 
-.header-container::before {
+.home-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-.header-container {
+.home-container {
   background-color: #fbcb38;
 }
 
@@ -35,8 +35,8 @@
 }
 
 .profile-picture img {
-  width: 330px;
-  height: 330px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
 }
 
@@ -103,10 +103,35 @@
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
+}
 
-  .menu-icon {
-    color: #3f0590;
-    position: absolute;
-    transition: transform 0.5s ease, opacity 0.3s ease, transform 0.3s ease;
-  }
+.menu-icon {
+  color: #3f0590;
+  position: absolute;
+  transition: transform 0.5s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+::ng-deep .mat-mdc-menu-panel {
+  background-color: #3f0590 !important; /* Roxo no fundo */
+  border-radius: 8px;
+  min-width: 200px !important;
+  color: white;
+  border-radius: unset !important;
+  padding: 10px;
+}
+
+::ng-deep .mat-mdc-menu-item {
+  color: #faf3e3 !important;
+  padding: 12px 24px;
+}
+
+::ng-deep .mat-mdc-menu-item:hover {
+  background-color: #c6d663 !important;
+  color: #3f0590 !important;
+}
+
+::ng-deep .mat-mdc-menu-item-text {
+  font-size: 25px !important;
+  font-weight: bold;
+  font-family: "Jersey 15", serif !important;
 }
