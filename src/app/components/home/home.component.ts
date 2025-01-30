@@ -63,4 +63,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.isMenuOpen = false;
     }
   }
+
+  scrollTo(section: string) {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

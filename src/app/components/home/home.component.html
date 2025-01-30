@@ -1,5 +1,5 @@
 <div class="logo-container">
-  <a href="/" class="logo-link">
+  <a (click)="scrollTo('home')" class="logo-link">
     <img src="assets/logo.png" alt="Logo" class="logo" />
   </a>
 </div>
@@ -33,8 +33,7 @@
 
 <!-- Menu Dropdown -->
 <mat-menu #menu="matMenu" (closed)="(!isMenuOpen)" class="menu-dropdown">
-  <button mat-menu-item>About</button>
-  <button mat-menu-item>Projects</button>
-  <button mat-menu-item>Curriculum</button>
-  <button mat-menu-item>Contact</button>
+  <button mat-menu-item (click)="scrollTo('about')">About</button>
+  <button mat-menu-item (click)="scrollTo('experience')">Experience</button>
+  <button mat-menu-item (click)="scrollTo('contact')">Contact</button>
 </mat-menu>
