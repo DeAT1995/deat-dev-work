@@ -29,7 +29,7 @@
 .profile-picture {
   position: absolute;
   left: 70%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
@@ -117,7 +117,7 @@
   min-width: 200px !important;
   color: white;
   border-radius: unset !important;
-  padding: 10px;
+  padding: 12px;
 }
 
 ::ng-deep .mat-mdc-menu-item {
@@ -131,7 +131,7 @@
 }
 
 ::ng-deep .mat-mdc-menu-item-text {
-  font-size: 25px !important;
+  font-size: 28px !important;
   font-weight: bold;
   font-family: "Jersey 15", serif !important;
 }
