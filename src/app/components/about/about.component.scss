@@ -1,3 +1,52 @@
 .about {
   height: 90vh;
+  background-color: #faf3e3;
+}
+
+.about h2 {
+  padding-top: 5%;
+  margin-left: 12%;
+  margin-bottom: 0 !important;
+}
+
+.about p {
+  font-size: 1em;
+  color: #6e6e6b;
+  font-size: 1.2em;
+  width: 40%;
+  text-align: justify;
+  margin-left: 12%;
+  font-family: "Arial", sans-serif;
+  font-weight: 200;
+  line-height: 1.8;
+  span {
+    font-weight: bold;
+    color: #fbcb38;
+    transition: all 0.3s ease-in-out;
+  }
+  span:hover {
+    background-color: #3f0590;
+    padding: 3px;
+    border-radius: 5px;
+    transform: scale(1.2);
+  }
+}
+
+.form-round {
+  position: absolute;
+  left: 55%;
+  top: 120%;
+  z-index: 3;
+}
+
+.form-round img {
+  width: 600px;
+  height: 600px;
+  transition: all 0.7s ease-in-out;
+
+}
+
+.form-round img:hover{
+  width: 625px;
+  height: 625px;
 }

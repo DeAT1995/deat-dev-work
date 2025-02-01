@@ -1,4 +1,30 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 html {
   scroll-behavior: smooth;
+  background-color: #faf3e3;
+}
+
+.title-section {
+  max-width: 400px;
+  --s: 0.1em;
+  --c: #3f0590;
+
+  color: #0000;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #c6d663 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 1s;
+}
+
+.title-section:hover {
+  --_p: 100%;
+}
+
+.title-section {
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  cursor: pointer;
 }
